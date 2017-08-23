@@ -16,16 +16,6 @@ export default {
     maxLength: 11,
     normalize: utils.normalizeTotalAmount
   },
-  discountable_amount: {
-    type: 'string',
-    maxLength: 11,
-    normalize: utils.normalizeTotalAmount    
-  },
-  undiscountable_amount: {
-    type: 'string',
-    maxLength: 11,
-    normalize: utils.normalizeTotalAmount    
-  },
   buyer_logon_id: {
     type: 'string',
     maxLength: 100
