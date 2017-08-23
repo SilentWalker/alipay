@@ -7,7 +7,11 @@ export default {
   ALIPAY_API_LIST: {
     'alipay.trade.query': '订单查询',
     'alipay.trade.app.pay': '生成创建订单所需参数',
-    'async.notify': '异步通知' // 自定义
+    'async.notify': '异步通知',
+    'alipay.trade.fastpay.refund.query' : '统一收单交易退款查询',
+    'alipay.trade.refund' : '统一收单交易退款接口',
+    'alipay.trade.precreate' : '统一收单线下交易预创建',
+    'alipay.trade.query' : '统一收单线下交易查询'
   },
   ALIPAY_GETWAY_MESSAGE: {
     10000: '接口调用成功',
