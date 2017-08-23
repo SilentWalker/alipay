@@ -12,6 +12,7 @@ export default class Alipay {
   constructor(options = {}) {
     this.privKey = options.appPrivKeyFile
     this.publicKey = options.alipayPubKeyFile
+    this.alipayPublicKey = options.alipayServerPublicKeyFile
 
     if (!this.privKey || !this.publicKey) {
       throw new Error('Invalid appPrivKeyFile or alipayPubKeyFile')
@@ -120,7 +121,7 @@ export default class Alipay {
     })
     .then(() => {
       const resp = { sign: params.sign, 'async_notify_response': params, sign_type: params.sign_type }
-      return utils.verifySign(this.publicKey, resp, ['sign', 'sign_type'], params)
+      return utils.verifySign(this.alipayPublicKey, resp, ['sign', 'sign_type'], params)
     })
     .then(valid => {
       const code = valid ? '0' : '-2'
